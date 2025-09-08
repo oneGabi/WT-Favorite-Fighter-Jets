@@ -1,0 +1,104 @@
+.fighter-jet {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: #252525;
+    padding-top: 10vh;
+
+    position: relative;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    z-index: 1;
+    position: relative;
+}
+
+.shortInfo {
+    letter-spacing: 2vw;
+    font-weight: 600;
+    margin-bottom: 0px;
+
+    transition-property: color, font-size;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0ms;
+}
+
+.shortInfo:hover {
+    color: #0a1f44;
+    font-size: 3vh;
+}
+
+.title {
+    margin-top: 0px;
+    font-size: 20vw;
+    font-weight: 900;
+
+    transition-property: color, transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0ms;
+}
+
+.title:hover {
+    color: #0a1f44;
+    transform: translateY(-1vh);
+}
+
+.gripen-sv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 80vw;
+    z-index: 2;
+}
+
+
+.info {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color: #ffffef;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    /* max-width: 1200px; */
+    /* margin: 0 auto 50px auto; */
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom, white, grey);
+}
+
+.infoBox {
+  position: relative;
+  flex: 1 1 300px;
+  min-width: 280px;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: #252525;
+  color: white;
+  box-sizing: border-box;
+  border: 2px solid #252525;
+  transition: box-shadow 0.4s ease, transform 0.5s ease, background-color 1s ease;
+}
+
+/* Brilho suave no hover */
+.infoBox:hover {
+    /* box-shadow:
+    0 0 8px 2px rgba(255, 245, 216, 0.7),
+    0 0 20px 6px rgba(255, 255, 255, 0.959); */
+    transform: scale(1.05);
+    background-color: #0a1f44;
+}
+
+li {
+    margin-left: 30px;
+}
+
+.infoBox:hover {
+  animation: pulseGlow 2s infinite;
+}
