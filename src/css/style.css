@@ -19,7 +19,6 @@
 .shortInfo {
     letter-spacing: 2vw;
     font-weight: 600;
-    margin-bottom: 0px;
 
     transition-property: color, font-size;
     transition-duration: 1s;
@@ -28,24 +27,32 @@
 }
 
 .shortInfo:hover {
-    color: #0a1f44;
-    font-size: 3vh;
+    color: #ff3223;
+    font-size: 2vh;
 }
 
 .title {
-    margin-top: 0px;
+    display: inline-block;
+    margin: 0vh;
+    padding: 0px;
     font-size: 20vw;
     font-weight: 900;
+    clip-path: inset(20% 0 10% 0); /* recorta a área de hover */
 
-    transition-property: color, transform;
-    transition-duration: 1s;
-    transition-timing-function: ease;
-    transition-delay: 0ms;
+    transition: color 1s ease, font-size 1500ms ease, transform 1s ease;
+}
+@media(max-aspect-ratio: 1.6/1){ 
+    .title:hover {
+        color: #0a1f44;
+    }
 }
 
-.title:hover {
-    color: #0a1f44;
-    transform: translateY(-1vh);
+@media(min-aspect-ratio: 1.6/1){ 
+    .title:hover {
+        color: #0a1f44;
+        transform: translateY(-1vh);
+        font-size: 10vw;
+    }
 }
 
 .gripen-sv {
@@ -55,6 +62,7 @@
     transform:translate(-50%, -50%);
     width: 80vw;
     z-index: 2;
+    pointer-events: none;
 }
 
 
